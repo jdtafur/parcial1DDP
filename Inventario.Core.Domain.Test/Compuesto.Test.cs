@@ -110,5 +110,62 @@ namespace Inventario.Core.Domain.Test
             //Verificación
             Assert.AreEqual("Retiro realizado satisfactoriamente", resultado);
         }
+        
+         /*
+           Escenario: Retirar cantidad igual A 1 con ingredientes incompletos
+           H1: COMO USUARIO QUIERO REGISTRAR LA SALIDA PRODUCTOS 
+
+           Criterio de Aceptación:
+           En caso de un producto compuesto la cantidad de la salida se le disminuirá a la cantidad existente de cada uno de su ingrediente
+           
+           Ejemplo
+           Dado El cliente crea un producto compuesto
+           Código 10001, Nombre “perro sencillo”, precio 5000, costo debe ser 3000 calculado,
+           
+           ingredientes:
+           1 salchicha
+           1 lamino de queso
+           1 pan perro
+           
+           Cuando Va a retirar 1 cantidad de dicho producto    
+
+           Entonces El sistema presentará el mensaje. "no hay suficientes productos en inventario para realizar el retiro"
+       */
+
+        [Test]
+        public void ExtractOneProductCompoundFailTest()
+        {
+            var productosSimplesList = new List<Simples>();
+            var movimientos = new List<Movimiento>();
+            
+            //Preparar
+            var perro = new Compuestos("10001", "perro sencillo", 5000);
+            //agregar inventario
+            var salchicha = new Simples("10001", "salchicha", 1000, 1000, "ingrediente");
+            var laminaQueso = new Simples("10002", "lamina de queso", 1000, 1000, "ingrediente");
+            var panPerro = new Simples("10003", "pan perro", 1000, 1000, "ingrediente");
+            
+            salchicha.Registro(1, productosSimplesList);
+            laminaQueso.Registro(1, productosSimplesList);
+            panPerro.Registro(1, productosSimplesList);
+            
+            //Acción
+            //se podra ingresar la cantidad que necesita de cada ingrediente
+            var Isalchicha = new Simples( "salchicha", 1000, 2);
+            var IlaminaQueso = new Simples("lamina de queso", 1000, 1);
+            var IpanPerro = new Simples("pan perro", 1000, 1);
+
+            List<Simples> ingredientes = new List<Simples>();
+            ingredientes.Add(Isalchicha);
+            ingredientes.Add(IlaminaQueso);
+            ingredientes.Add(IpanPerro);
+            
+            perro.RegistroIngredientes(ingredientes);
+
+            var resultado = perro.Retiro(1, productosSimplesList, movimientos);
+            
+            //Verificación
+            Assert.AreEqual("no hay suficientes productos en inventario para realizar el retiro", resultado);
+        }
     }
 }

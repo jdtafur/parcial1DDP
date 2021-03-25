@@ -5,46 +5,47 @@ namespace Inventario.Core.Domain
 {
     public class Compuestos : Productos
     {
-         public Compuestos(string codigo, string nombre, decimal precio) : base(codigo, nombre, precio)
+        public Compuestos(string codigo, string nombre, decimal precio) : base(codigo, nombre, precio)
         {
             Ingredientes = new List<Simples>();
         }
-        
+
         public void RegistroIngredientes(List<Simples> ingredientes)
         {
             Ingredientes = ingredientes;
         }
 
-        public void retirarIngredientesInventario(List<Simples> productosSimples, List<Movimiento> movimientos, int cantidad)
+        public void retirarIngredientesInventario(List<Simples> productosSimples, List<Movimiento> movimientos,
+            int cantidad)
         {
             foreach (var ingrediente in Ingredientes)
             {
-                Simples product = productosSimples.Find(p => p.Nombre == ingrediente.Nombre);
                 int cantidadRetirada = (ingrediente.Cantidad * cantidad);
-                product.Retiro((product.Cantidad - cantidadRetirada), productosSimples, movimientos);
+                productosSimples.Find(p => p.Nombre == ingrediente.Nombre)
+                    .Retiro(cantidadRetirada, productosSimples, movimientos);
             }
         }
 
-        public string Retiro(int cantidad,List<Simples> productosSimples, List<Movimiento> movimientos)
+        public string Retiro(int cantidad, List<Simples> productosSimples, List<Movimiento> movimientos)
         {
             if (cantidad <= 0)
             {
                 return "la cantidad a retirar debe ser mayor a cero";
             }
 
-            if (!Disponibilidad(productosSimples))
+            if (!Disponibilidad(cantidad, productosSimples))
             {
                 return "no hay suficientes productos en inventario para realizar el retiro";
             }
-            
+
             Costo = CalcularCosto();
-            
+
             try
             {
-                retirarIngredientesInventario(productosSimples,movimientos, cantidad);
-                
+                retirarIngredientesInventario(productosSimples, movimientos, cantidad);
+
                 movimientos.Add(new Movimiento(Costo, Precio, cantidad, "producto preparado", Nombre));
-                
+
                 return "Retiro realizado satisfactoriamente";
             }
             catch (Exception e)
@@ -53,14 +54,13 @@ namespace Inventario.Core.Domain
             }
         }
 
-        public bool Disponibilidad(List<Simples> productosSimples)
+        public bool Disponibilidad(int cantidad, List<Simples> productosSimples)
         {
-            bool disponible = false;
 
             // si no hay ingredientes no hay disponibilidad
             if (productosSimples.Count < 1)
             {
-                return disponible;
+                return false;
             }
             
             foreach (var ingrediente in Ingredientes)
@@ -69,13 +69,14 @@ namespace Inventario.Core.Domain
                 {
                     return false;
                 }
-                else if (productosSimples.Find(p => p.Nombre == ingrediente.Nombre).Cantidad >= (ingrediente.Cantidad*Cantidad))
+
+                if (productosSimples.Find(p => p.Nombre == ingrediente.Nombre).Cantidad < (ingrediente.Cantidad*cantidad))
                 {
-                    disponible = true;
+                    return false;
                 }
             }
             
-            return disponible;
+            return true;
         }
         
         //el costo de los productos compuestos corresponden al costo de sus ingredientes por 
