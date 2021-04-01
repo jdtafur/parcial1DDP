@@ -82,14 +82,10 @@ namespace Inventario.Core.Domain
         //el costo de los productos compuestos corresponden al costo de sus ingredientes por 
         public decimal CalcularCosto()
         {
-            decimal costo = 0;
+            ProductService productService = new ProductService();
             
-            foreach (var ingrediente in Ingredientes)
-            {
-                costo += (ingrediente.Costo * ingrediente.Cantidad);
-            }
+            return  productService.CalcularCostoCompuesto(Ingredientes);
             
-            return costo;
         }
        
         protected List<Simples> Ingredientes;

@@ -32,6 +32,11 @@ namespace Inventario.Core.Domain
 
         }
 
+        public decimal calcularCosto()
+        {
+            return (Costo * Cantidad);
+        }
+
         public string Retiro(int cantidad, List<Simples> productosList, List<Movimiento> movimientos)
         {
             if (cantidad <= 0)
