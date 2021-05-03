@@ -38,8 +38,9 @@ namespace Inventario.Core.Domain
             Cantidad = cantidad;
         }
         
-        public string Codigo { get; }
-        public string Nombre { get; }
+        public string Id { get; private set; }
+        public string Codigo { get; private set;}
+        public string Nombre { get; private set;}
         public decimal Precio { get; protected set; }
         public decimal Costo { get; protected set; }
         public int Cantidad { get; set; }

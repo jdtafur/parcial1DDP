@@ -5,6 +5,8 @@ namespace Inventario.Core.Domain
 {
     public class Compuestos : Productos
     {
+        protected List<Simples> Ingredientes;
+        protected List<Movimiento> _movimientos;
         public Compuestos(string codigo, string nombre, decimal precio) : base(codigo, nombre, precio)
         {
             Ingredientes = new List<Simples>();
@@ -45,8 +47,5 @@ namespace Inventario.Core.Domain
             return  productService.CalcularCostoCompuesto(Ingredientes);
             
         }
-       
-        protected List<Simples> Ingredientes;
-        protected List<Movimiento> _movimientos;
     }
 }

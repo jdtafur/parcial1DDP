@@ -1,0 +1,15 @@
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\bin\Debug\net5.0\Inventario.Infrastructure.Data.deps.json
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\bin\Debug\net5.0\Inventario.Infrastructure.Data.dll
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\bin\Debug\net5.0\ref\Inventario.Infrastructure.Data.dll
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\bin\Debug\net5.0\Inventario.Infrastructure.Data.pdb
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\obj\Debug\net5.0\Inventario.Infrastructure.Data.csprojAssemblyReference.cache
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\obj\Debug\net5.0\Inventario.Infrastructure.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\obj\Debug\net5.0\Inventario.Infrastructure.Data.AssemblyInfoInputs.cache
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\obj\Debug\net5.0\Inventario.Infrastructure.Data.AssemblyInfo.cs
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\obj\Debug\net5.0\Inventario.Infrastructure.Data.csproj.CoreCompileInputs.cache
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\obj\Debug\net5.0\Inventario.Infrastructure.Data.dll
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\obj\Debug\net5.0\ref\Inventario.Infrastructure.Data.dll
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\obj\Debug\net5.0\Inventario.Infrastructure.Data.pdb
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\bin\Debug\net5.0\Inventario.Core.Domain.dll
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\bin\Debug\net5.0\Inventario.Core.Domain.pdb
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Infrastructure.Data\obj\Debug\net5.0\Inventario.Infrastructure.Data.csproj.CopyComplete

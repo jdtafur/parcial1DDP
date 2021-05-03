@@ -68,7 +68,7 @@ namespace Inventario.Core.Domain.Test
            1 lamino de queso
            1 pan perro
            
-           Cuando Va a retirar 1 cantidad de dicho producto    
+           Cuando Va a retirar 1 cantidad de perro sencillo  
 
            Entonces El sistema presentará el mensaje. "Se realizó el retiro de 1 producto(s) de tipo compuesto perro sencillo con un costo de 3000 y un precio de 5000"
        */
@@ -76,7 +76,6 @@ namespace Inventario.Core.Domain.Test
         [Test]
         public void ExtractOneProductCompoundSuccesTest()
         {
-
             //Preparar
             var perro = new Compuestos("10001", "perro sencillo", 5000);
 

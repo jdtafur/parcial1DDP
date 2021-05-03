@@ -1,0 +1,12 @@
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\bin\Debug\net5.0\Inventario.Aplication.deps.json
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\bin\Debug\net5.0\Inventario.Aplication.dll
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\bin\Debug\net5.0\ref\Inventario.Aplication.dll
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\bin\Debug\net5.0\Inventario.Aplication.pdb
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\obj\Debug\net5.0\Inventario.Aplication.csprojAssemblyReference.cache
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\obj\Debug\net5.0\Inventario.Aplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\obj\Debug\net5.0\Inventario.Aplication.AssemblyInfoInputs.cache
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\obj\Debug\net5.0\Inventario.Aplication.AssemblyInfo.cs
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\obj\Debug\net5.0\Inventario.Aplication.csproj.CoreCompileInputs.cache
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\obj\Debug\net5.0\Inventario.Aplication.dll
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\obj\Debug\net5.0\ref\Inventario.Aplication.dll
+C:\Users\juand\RiderProjects\Inventario.Core.Domain\Inventario.Aplication\obj\Debug\net5.0\Inventario.Aplication.pdb
